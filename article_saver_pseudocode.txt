@@ -1,0 +1,98 @@
+    Project Title: Food for thought, news article collector
+    Major Features/Requirements: use of new APIs or webscraping for news data (learn more about this)
+    Github link to documentation:
+    Github link to pseudocode:
+    Expected code features: list, dictionaries, modules, classes, external files, APIs, others
+    External modules: News API
+    External APIs: ability to use RSS feed, or APIs from different news sources...that seems limiting
+    Major challenges to tackle:
+
+    Description: Goodreads for collecting lists of articles
+      There are two high level categories (classes maybe?): "Read" and "To-Read". Both will allow for folders/tags of categories that
+      the user can create by themself (e.g., politics).
+
+Process #1 (User selected from premade article list):
+  1. User subscribes to the news API service that give them updates on trending and current articles.
+
+  2. User is able to select articles that they are interested in, and categorize it in the "To-Read" folder.
+    a. This prompts the ability to save it to a current folder/tag, or create a new one. (e.g., "Politics" or "Fashion blogs")
+
+  3. Once the user clicks "SAVE", the program will parse out the following data and save it as a dictionary key and values
+  (e.g., "To-Read - Politics = [Article Title:Author, Publication date, Description, Date added, URL, User ID]")
+
+  4. The user can select the dictionary they would like to view (i.e. this is based on the "To-Read" and the folder/tag) to see
+  a list of all the articles that have been saved.
+
+  5. User can select the article (key) to view more information, like the full description.
+
+  6. User will have a few choices to make:
+    a. User can choose an article to read immediately, by selecting number associated with article in the list or clicking on the article
+  (if there is a user interface available). This will open up the url link to the article.
+    b. User can choose to delete an article from the dictionary and view more articles in the dictionary.
+    c. User can choose to look at articles from a different dictionary.
+    d. User can choose to exit the program.
+
+  7. Once the user has read the article, they can:
+    a. Go back to the article saved, and mark it as "Read".
+    b. Search for it in the dictionaries, and mark it as "Read".
+
+  8. Marking it as read will move the article information to a new "Read - Politics" dictionary.
+    a. It will also prompt user to rate the article 1-4 (1 = bad, 4 = great).
+    b. It will also ask the user to leave feedback or review.
+    c. It will also ask the user if they'd like to share the article with others (email, Facebook, Twitter)
+
+
+Process #2 (User input):
+    1. User finds article on their own and wants to save data into their program file to retrieve later.
+
+    2a. Manual user input: User will select to add something in the "To-Read" dictionary. They will be
+    asked whether they'd like to add to an existing folder/tag (e.g., Politics) or create a new one.
+
+    User will be prompted to enter the following data:
+      1. Article Title (key)
+      2. Author (value)
+      3. Publication date (value)
+      4. Description (value)
+      5. URL (value)
+      6. ** Date added (value) will automatically populate with timestamp of when this was added
+      7. ** User added ID will be automatically populated
+
+    2b. Semi-automated user input: User will somehow webscrape the page to get the same data from 2a.
+      **Requires additional research on how webscraping works and if this is even feasible. Otherwise, can it
+      search for an RSS feed that would figure this out?
+
+    3. The remaining functionality should be the same at Process #1.
+
+Future features and goals:
+  1. Recommender system -may be too much to handle...
+  2. Front-end interface
+        a. abilty to view all your dictionaries
+        b. ability to check off an article from "To-read" and turn it into "Read"; sends you to a page for Rating
+        c. ability to share with others (email, social media)
+        d. search for other articles with similar key words?? (Google checker)
+  3. Chrome extension to do this on any internet article
+  4. Add images from the article
+
+Schedule goals:
+  - Nov. 19 and 20 weekend - complete research and confirm connection to News API
+      a. Other news APIs that provide accessible and standard data
+      b. Webscraping - how does it work and will it work for this case?
+      c. Getting data from an RSS feed. How does this work and will it work for this use case?
+      d. Confirm connection to News API
+      e. Get up to speed on Classes
+  - Nov. 21 week - complete pseudocode and start backend code
+      a. Ability to create different classes and dictionaries
+      b. Defining functions for retrieving data from API(s)
+      c. Defining functions to add to or delete from dictionaries. Moving.
+      c. Webscrape data?
+  - Nov. 26 and 27 weekend - complete first draft of backend code
+      a. Defining functions for adding feedback.
+      b. Defining functions for sharing article.
+  - Nov. 28 week - complete first draft of frontend code and clean up backend
+      a. Create simple interface that allows user to view dictionaries and folder easily and be directed to article.
+      b. Easily leave and add feedback
+      c. Easily share article
+      d. Refactor code
+      e. Make pretty
+  - Nov. 29 - first version code due
+  - Dec. 6 - final code due
